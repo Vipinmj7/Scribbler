@@ -1,0 +1,57 @@
+h1{
+    font-family: 'Montez', cursive;
+    color: blue;
+    line-height: 0;
+}
+#sub-header{
+    font-family: 'Ubuntu Mono';
+}
+button{
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+#postsButton{
+    text-align: center;
+    padding: 10px 30px;
+    margin-top: 10px;
+    position:fixed;
+    top: 50%;
+    left: 40%;
+}
+#button1{
+    text-align: center;
+    color: white;
+    background: blue;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+#button2{
+    text-align: center;
+    color: white;
+    background: blue;
+    position: absolute;
+    top: 8px;
+    right: 150px;
+}
+#button3{
+    text-align: center;
+    color: black;
+    background: goldenrod;
+    position: center;
+}
+#button4{
+    text-align: center;
+    color: black;
+    background: goldenrod;
+    position: center;
+}
+body{
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
