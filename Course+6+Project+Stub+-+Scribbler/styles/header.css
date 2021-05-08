@@ -1,0 +1,23 @@
+#signin{
+    text-align: center;
+    color: white;
+    background: blue;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+#signup{
+    text-align: center;
+    color: white;
+    background: blue;
+    position: absolute;
+    top: 8px;
+    right: 150px;
+}
+#sub-header{
+    font-family: 'Ubuntu Mono';
+}
+button{
+    padding: 10px 30px;
+    margin-top: 10px;
+}

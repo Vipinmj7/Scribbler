@@ -1,36 +1,115 @@
 <!DOCTYPE html>
+<!--suppress XmlDuplicatedId -->
 <html>
 
 <head >
     <script src = scripts/index.js></script>
+
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/common.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    /* Header items*/
     <div id ="header>">
         <h1>ScriBBler</h1>
         <div id="sub-header">
             <h5>Explore, Imagine, Create</h5>
         </div>
+        /* Header buttons */
         <div class="button">
-            <button id="button1">Sign Up</button>
-            <button id="button2">Sign In</button>
-        </div>
+            <button id="signup" onclick="signupfunction()" >Sign Up</button>
+            <button id="signin" onclick="signinfunction()" >Sign In</button>
+                    </div>
     </div>
+
+    /* Post buttons on index page */
     <div class="posts">
         <div id="postsButton">
-            <button id="button3">All Posts</button>
-            <button id="button4">Create Posts</button>
+            <button id="allpost" onclick="location.href='/html/bloglist.html'">All Posts</button>
+            <button id="createpost" onclick="createfunction()">Create Posts</button>
         </div>
     </div>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-        </div>
 
+    /* Division for the signup modal*/
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-signup">&times;</span>
+            <form id="signup-form">
+                <h2>Get Started</h2>
+                <hr>
+                <label class="labelText">Name</label>
+                <br/>
+                <input type="text" placeholder="Enter your name" id="name" required>
+                <br/><br/>
+                <label class="labelText">User name</label>
+                <br/>
+                <input type="text" placeholder="Enter your username" id="username" required>
+                <br/><br/>
+                <label id="password">Password</label>
+                <br/>
+                <input type="password" placeholder="Enter your password" id="password" required>
+                <br/><br/>
+                <label id="confirm-password">Confirm Password</label>
+                <br/>
+                <input type="password" placeholder="Re-Enter your password" id="confirmpassword" required>
+                <br/><br/>
+                <button id="signup-button" class="form-button" onclick="signup()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    /* Division for the signin modal*/
+    <div id="signinModal" class="modal">
+        <div class="modal-content">
+            <span class="close-signin">&times;</span>
+            <form id="signin-form">
+                <h2>Welcome Back!</h2>
+                <hr>
+                <label class="labelText">User name</label>
+                <br/>
+                <input type="text" placeholder="Enter your username" id="sin-username" required>
+                <br/><br/>
+                <label id="password">Password</label>
+                <br/>
+                <input type="password" placeholder="Enter your password" id="password" required>
+                <br/>
+                <button id="signin-button" class="form-button" onclick="signin()">Sign In</button>
+                <br/>
+                <div class="footer">Not a member ? <span  id ="hreflink" data-dismiss="modal" href="" onclick="hidesignin();signupshow()" > Sign Up</span>
+                </div>
+             </form>
+
+        </div>
+    </div>
+
+    /* Division for the create post modal*/
+    <div id="createModal" class="modal">
+        <div class="create-content">
+            <span class="create-signin">&times;</span>
+            <form id="create-form">
+                <h2>Pen Your Post</h2>
+                <hr>
+                <label class="labelText">Title</label>
+                <br/>
+                <input type="text" placeholder="Enter title of your post" id="title" required>
+                <br/><br/>
+                <label id="contents">Contents</label>
+                <br/>
+                <input type="contents" placeholder="Enter the contents of your post" id="contents" required style="height: 300px; align-content: center" >
+                <br/>
+                <button id="create-button" class="form-button" onclick="create()">Create</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
