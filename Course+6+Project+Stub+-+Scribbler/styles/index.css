@@ -1,8 +1,4 @@
-h1{
-    font-family: 'Montez', cursive;
-    color: blue;
-    line-height: 0;
-}
+
 h2{
     font-family: Arial;
 }
@@ -32,7 +28,7 @@ h2{
 
 
 #create-button{
-    background-color: limegreen;
+    background-color: #5eb762;
     position: relative;
     left: 280px;
 }
