@@ -52,7 +52,13 @@ dotsArray.map(dot => {
 });
 
 navigateToPost = postThread => {
-    console.log("inside");
+    var post = postThread.closest(".post");
+    var author = post.querySelector(".post-username").textContent.trim();
+    var postTitle = post.querySelector(".post-title").textContent.trim();
+    var postContent = post.querySelector(".post-content").textContent.trim();
+    sessionStorage.setItem("author", author);
+    sessionStorage.setItem("postTitle", postTitle);
+    sessionStorage.setItem("postContent", postContent);
     window.location.href = "../html/post.html";
 };
 
