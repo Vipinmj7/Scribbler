@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <script src="https://use.fontawesome.com/12e84c3aa6.js"></script>
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+
+    <meta charset="utf-8"/>
+
+    <link href='..\styles\post.css' rel='stylesheet' type='text/css'>
+    <link href='..\styles\header.css' rel='stylesheet' type='text/css'>
+    <link href='..\styles\common.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<!-- TODO: Include code for header here -->
+    <div id ="header>">
+    <h1>ScriBBler</h1>
+    <div id="sub-header">
+        <h5>Explore, Imagine, Create</h5>
+    </div>
+    <!--   /* Header buttons */ -->
+    <div class="button">
+        <button id="signup" onclick="signupfunction()" >Sign Up</button>
+        <button id="signin" onclick="signinfunction()" >Sign In</button>
+    </div>
+</div>
+<!-- /* Division for the signup modal*/  -->
+    <div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close-signup">&times;</span>
+        <form id="signup-form">
+            <h2>Get Started</h2>
+            <hr>
+            <label class="labelText">Name</label>
+            <br/>
+            <input type="text" placeholder="Enter your name" id="name" required>
+            <br/><br/>
+            <label class="labelText">User name</label>
+            <br/>
+            <input type="text" placeholder="Enter your username" id="username" required>
+            <br/><br/>
+            <label id="password">Password</label>
+            <br/>
+            <input type="password" placeholder="Enter your password" id="password" required>
+            <br/><br/>
+            <label id="confirm-password">Confirm Password</label>
+            <br/>
+            <input type="password" placeholder="Re-Enter your password" id="confirmpassword" required>
+            <br/><br/>
+            <button id="signup-button" class="form-button" onclick="signup()">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<!-- /* Division for the signin modal*/  -->
+    <div id="signinModal" class="modal">
+    <div class="modal-content">
+        <span class="close-signin">&times;</span>
+        <form id="signin-form">
+            <h2>Welcome Back!</h2>
+            <hr>
+            <label class="labelText">User name</label>
+            <br/>
+            <input type="text" placeholder="Enter your username" id="sin-username" required>
+            <br/><br/>
+            <label id="password">Password</label>
+            <br/>
+            <input type="password" placeholder="Enter your password" id="password" required>
+            <br/>
+            <button id="signin-button" class="form-button" onclick="signin()">Sign In</button>
+            <br/>
+            <div class="footer">Not a member ? <span  id ="hreflink" data-dismiss="modal" href="" onclick="hidesignin();signupshow()" > Sign Up</span>
+            </div>
+        </form>
+
+    </div>
+</div>
+<!--  Post title -->
+<section>
+    <div class="posts-body">
+        <p class="post-title" id="postTitle"></p>
+        <div class="author-edit-wrapper">
+            <span id="author"></span>
+            <button class="btn btn-danger saved btn-common" id="editPost">Edit <i class="fa fa-edit"></i></button>
+        </div>
+        <p class="post-content" id="postContent"></p>
+        <div class="like-wrapper">
+            <button class="btn btn-danger like-button btn-common"><i class="fa fa-thumbs-up"></i>Like</button>
+            <p id="likeText">Be the first one to like this!</p>
+        </div>
+        <div class="comments-wrapper">
+            <textarea name="comments" id="commentBox" placeholder="Leave a comment..." required></textarea>
+            <br>
+            <button class="btn btn-danger comment-button btn-common">Comment</button>
+            <p class="all-comments-text">All Comments</p>
+            <div id="commentsWrapper"></div>
+        </div>
+    </div>
+</section>
+
+/* Javascript linking */
+<script src="../scripts/post.js"></script>
+<script src="../scripts/common.js"></script>
+</body>
+</html>

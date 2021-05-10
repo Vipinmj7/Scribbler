@@ -1,15 +1,23 @@
 body{
     background-color: #ffeedd;
 }
+/* Post - Container box */
 .post {
     position: relative;
+    transition: box-shadow .3s;
     width: 40%;
+    height: 5%;
     background: #fff;
-    box-shadow:0 4px 10px 0 rgba(17, 4, 63, 0.2),0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    box-shadow:0 4px 10px 0 rgba(0, 0, 0, 0),0 4px 20px 0 rgba(0, 0, 0, 0);
     margin: 10px;
     border-radius: 15px;
 }
 
+.post:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+/* Left side of the container box for the author name */
 .post-left {
     width: 15%;
     max-width: 15%;
@@ -17,6 +25,7 @@ body{
     vertical-align: middle;
     text-align: center;
     font-weight: bold;
+    font-size: larger;
     color: #000;
     overflow: auto;
 }
@@ -48,13 +57,12 @@ body{
     font-size: 30px;
 }
 
-.post-desc{
+.post-text{
+    font-size: 115%;
     height: 85px;
     margin-bottom: 0 !important;
     overflow: hidden;
 }
-
-
 
 .allPostsContainer {
     display: flex;
@@ -72,25 +80,25 @@ body{
 
 /* The Modal (background) */
 .trash-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
 /* Modal Content/Box */
 .trash-modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    width: 50%;
     text-align: center;
 }
 
@@ -116,11 +124,13 @@ body{
     background-color:  #f44336; /* Red */
     border: none;
     color: white;
-    width: 45%;
+    width: 30%;
+    float: right;
+
 }
 .btn-Yes {
     background-color:  #5eb762; /* green */
     border: none;
     color: white;
-    width: 45%;
+    width: 30%;
 }
